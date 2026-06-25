@@ -2471,7 +2471,7 @@ SINGLE_AUTO_TOPUP_RECEIVER = {
 # ปรับใน .env ได้ เช่น BANK_ACCOUNT_COOLDOWN_SECONDS=10
 BANK_ACCOUNT_COOLDOWN_SECONDS = int(os.getenv("BANK_ACCOUNT_COOLDOWN_SECONDS", "10"))
 BANK_ACCOUNT_COOLDOWN_CACHE = {}
-BANK_BACKOFFICE_URL = os.getenv("BANK_BACKOFFICE_URL", "https://page.line.me/631kykty").strip() or "https://page.line.me/631kykty"
+BANK_BACKOFFICE_URL = os.getenv("BANK_BACKOFFICE_URL", "https://page.line.me/917tvoai").strip() or "https://page.line.me/917tvoai"
 
 
 def is_bank_account_request(text: str) -> bool:
