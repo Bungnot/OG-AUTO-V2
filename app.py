@@ -2454,10 +2454,10 @@ def money_text(value):
 # Bank account command
 # ======================================================
 
-BANK_ACCOUNT_NUMBER = "2062416164"
-BANK_ACCOUNT_DISPLAY_NUMBER = "2062416164"
-BANK_ACCOUNT_BANK = "เกียรตินาคินภัทร"
-BANK_ACCOUNT_NAME = "ธนาวุฒิ แสวงศรี"
+BANK_ACCOUNT_NUMBER = "2171723496"
+BANK_ACCOUNT_DISPLAY_NUMBER = "2171723496"
+BANK_ACCOUNT_BANK = "กสิกรไทย"
+BANK_ACCOUNT_NAME = "นนณพัฒน์ เหมรานนท์"
 # ใช้บัญชีเดียวสำหรับเติมเครดิตอัตโนมัติเท่านั้น
 # โค้ดจะใช้บัญชีนี้ตรวจ checkReceiver กับ Slip2Go และจะไม่รับบัญชีอื่น แม้ .env ยังมีบัญชีเก่าอยู่
 SINGLE_AUTO_TOPUP_RECEIVER = {
@@ -2503,12 +2503,12 @@ def is_bank_account_request(text: str) -> bool:
 
 def bank_account_text() -> str:
     return (
-        "🟣  บั้งไฟอีสาน OG V2 💯💵\n"
+        "🟢  บั้งไฟอีสาน OG V2 💯💵\n"
         "━━━━━━━━━━━━━━\n\n"
         "🏦 แจ้งเลขบัญชีฝากเงิน\n\n"
-        "🟣 เลขบัญชี : 2062416164\n"
-        "🟣 ธนาคาร : KKP เกียรตินาคิน\n"
-        "🟣 ชื่อบัญชี : ธนาวุฒิ แสวงศรี\n\n"
+        "🟢 เลขบัญชี : 2062416164\n"
+        "🟢 ธนาคาร : กสิกรไทย\n"
+        "🟢 ชื่อบัญชี : นนณพัฒน์ เหมรานนท์\n\n"
         "━━━━━━━━━━━━━━\n"
         "เพื่อป้องกันมิจฉาชีพ ชื่อผู้ฝาก-ถอนต้องเป็นชื่อเดียวกันเท่านั้น ‼️ 🚫"
     )
