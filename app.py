@@ -12302,7 +12302,7 @@ def should_process_text_message(event, text: str) -> bool:
             or is_new_member_instruction_request(raw)
             or is_bank_account_request(raw)
             or is_withdrawal_command(raw)
-            or is_scoreboard_command(raw)
+            or (is_scoreboard_command(raw) and is_admin(user_id))
         ):
             return True
 
@@ -12705,6 +12705,9 @@ def handle_message(event):
 
     score_clean = re.sub(r"\s+", "", (text or "").strip()).lower()
     if is_scoreboard_command(text) and not (is_private_chat(event) and score_clean == "รายการ"):
+        if not is_admin(user_id):
+            reply_text(event.reply_token, "คำสั่งนี้ใช้ได้เฉพาะแอดมิน")
+            return
         flex = scoreboard_flex_for_chat(get_current_chat_id(event))
         if flex:
             reply_flex(event.reply_token, "สกอค่าย", flex)
